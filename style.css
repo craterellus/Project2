@@ -1,7 +1,7 @@
 
 
 body{
-  background-image: url("/img/assets/bg.jpg");
+  background-image: url("img/assets/bg.jpg");
   background-color: #222;
   margin: auto;
   color:#ccc;
@@ -73,7 +73,7 @@ header p{
 #Hand:hover {
   opacity:100;
   transition: opacity 0.5s;
-  cursor: url("/img/assets/cursor-1.png"),auto;
+  cursor: url("img/assets/cursor-1.png"),auto;
 }
 
 
@@ -236,12 +236,12 @@ header p{
   height:4700px;
 }
 .click-cursor:hover{
-  cursor: url("/img/assets/cursor-2.png"), auto;
+  cursor: url("img/assets/cursor-2.png"), auto;
 
 }
 
 .view-cursor:hover{
-  cursor: url("/img/assets/cursor-3.png"), auto;
+  cursor: url("img/assets/cursor-3.png"), auto;
 
 }
 .img-hover:hover{
