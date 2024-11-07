@@ -1,0 +1,581 @@
+
+
+body{
+  background-image: url("/img/assets/bg.jpg");
+  background-color: #222;
+  margin: auto;
+  color:#ccc;
+  width: 1200px;
+}
+
+/********* NAV BAR **********/
+
+.nav-bar{
+  font-family: "Special Elite";
+  font-size:0.7rem;
+  position: fixed;
+  background-color: black;
+  z-index:30;
+  width:100%;
+  margin:auto;
+  left: 0;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: #183626;
+  transition: 0.3s ease-in-out;
+}
+
+.nav.active {
+  background-color: #04AA6D;
+}
+
+
+
+/********* HEADER **********/
+
+header{
+  text-align: center;
+  margin-bottom: 400px;
+  padding-top: 200px;
+}
+header p{
+  width:500px;
+  margin:auto;
+}
+
+#Hand{
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+#Hand:hover {
+  opacity:100;
+  transition: opacity 0.5s;
+  cursor: url("/img/assets/cursor-1.png"),auto;
+}
+
+
+
+
+
+
+
+
+/********* SKULL ***************/
+
+.skull-section{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom:300px;
+}
+
+#skull{
+  width:500px;
+  grid-column-start: 3;
+}
+
+.skull-card{
+  grid-column-start:2;
+  grid-column-end:3;
+}
+
+#skull-bubble{
+  width:500px;
+}
+
+.skull-card {
+
+  perspective: 500px;
+  transform: translateX(-100px) translateY(-150px);
+}
+
+.skull-flip-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+}
+
+.skull-card:hover .skull-flip-content {
+  transform: rotateX( 90deg ) ;
+  transition: transform 0.5s;
+}
+
+.skull-card:hover .skull-back{
+  opacity:1;
+  transition: opacity 1s;
+}
+
+.skull-front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 300px;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.skull-back {
+  position:absolute;
+  transform: translate(100px, 250px);
+  width:300px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  padding:10px;
+  color:#bbb;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+
+/********* WHAT IS THIS **************/
+
+.what-this{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom:50px;
+}
+
+#what-this{
+  width:550px;
+  grid-column-start:2;
+  transform: translateY(-170px);
+}
+#mouth{
+  width:400px;
+  transform:rotate(-20deg);
+  grid-column-start:1;
+  grid-column-end:2;
+  transform: translateX(50px);
+}
+
+.what-card{
+  grid-column-start:2;
+  grid-column-end:3;
+}
+
+#what-bubble{
+  width:500px;
+}
+
+.what-card {
+  perspective: 500px;
+  transform: translate(50px,-200px);
+}
+
+.what-flip-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform: translate(300,10);
+}
+
+.what-card:hover .what-front {
+  transform: rotateX( 90deg ) ;
+  transition: transform 0.5s;
+}
+
+.what-card:hover .what-back{
+  opacity:1;
+  transition: opacity 1s;
+}
+
+.what-front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+
+}
+
+.what-back {
+  position:absolute;
+  transform: translate(100px, 200px);
+  width:300px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  padding:20px;
+  color:#bbb;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+/***************** COLLAGE ****************/
+.collage{
+  height:4700px;
+}
+.click-cursor:hover{
+  cursor: url("/img/assets/cursor-2.png"), auto;
+
+}
+
+.view-cursor:hover{
+  cursor: url("/img/assets/cursor-3.png"), auto;
+
+}
+.img-hover:hover{
+  transform: scale(1.1);
+  z-index:20;
+  transition: all 300ms ease-in-out;
+  filter: drop-shadow(20px 10px 4px rgba(0, 0, 0, 0.714));
+  border: 2px solid rgb(255, 0, 170);
+}
+
+#how-to-dem{
+  width:400px;
+  transform: translateX(300px) translateY(700px);
+}
+
+.collage{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#graffiti{
+  width:600px;
+  grid-row-start:4;
+  transform: rotate(-10deg) translate(-150px, -150px);
+}
+
+#bridge{
+  grid-column-start: 2;
+  grid-row-start:2;
+  grid-column-end:4;
+  transform: rotate(-20deg) translateY(-400px);
+  transition: all 300ms ease-in-out;
+}
+
+#chainsaw{
+  grid-column-start: 1;
+  grid-row-start:2;
+  transform: rotate(-10deg);
+  transition: all 300ms ease-in-out;
+  width:600px;
+}
+
+#piracy{
+  grid-column-start: 2;
+  transform: rotate(20deg) translate(200px,700px);
+  transition: all 300ms ease-in-out;
+  width:500px;
+}
+
+#dad-story{
+  grid-column-start: 1;
+  transform: rotate(-20deg) translateY(-150px);
+  transition: all 300ms ease-in-out;
+  width:400px;
+}
+
+#mirror{
+  grid-column-start: 3;
+  transform: rotate(5deg) translateX(-300px);
+  transition: all 300ms ease-in-out;
+  height:600px;
+  z-index:2;
+}
+
+#nudes{
+  grid-column-start: 2;
+  transform: rotate(-15deg) translateX(-200px) translateY(-400px);
+  transition: all 300ms ease-in-out;
+  width:600px;
+}
+
+#evil{
+  grid-column-start: 1;
+  grid-row-start:5;
+  transform: rotate(20deg) translateX(-100px);
+  transition: all 300ms ease-in-out;
+  width:600px;
+}
+
+
+
+#cops{
+  z-index: 1;
+  grid-column-start:2;
+  width:500px;
+  transform: rotate(-5deg) translateX(-250px) translateY(-300px);
+}
+
+#homeless{
+  width:400px;
+  grid-column-start:3;
+  transform: rotate(-10deg) translateY(-500px) translateX(-400px);
+}
+
+#building{
+  width:400px;
+  transform: rotate(-15deg) translate(0,-100px);
+}
+
+#maze{
+  width:550px;
+  transform: rotate(25deg) translateX(-300px) translateY(-300px);
+
+}
+
+#demonstration{
+  width:500px;
+  grid-column-start:3;
+  transform: rotate(15deg) translateX(-500px);
+}
+
+#family-portrait{
+  grid-column-start: 2;
+  grid-row-start:7;
+  transform: rotate(-5deg) translateY(-550px);
+  transition: all 300ms ease-in-out;
+  width:500px;
+}
+
+#dreamgirl{
+  grid-column-start: 1;
+  transform: rotate(40deg) translate(-100px,-600px);
+  transition: all 300ms ease-in-out;
+  height:500px;
+}
+
+#self-portrait{
+  grid-column-start: 2;
+  transform: rotate(20deg) translate(-400px, -500px);
+  transition: all 300ms ease-in-out;
+  width:400px;
+}
+
+#tattoo{
+  grid-column-start:1;
+  width:500px;
+  transform: rotate(-20deg)translate(400px,-900px);
+  transition: all 300ms ease-in-out;
+}
+
+#shower1{
+  grid-column-start:3;
+  transform: rotate(-10deg) translate(-200px,-1500px);
+}
+#shower2{
+  grid-column-start:1;
+  width:450px;
+  transform: rotate(10deg) translate(200px,-1200px);
+}
+#shower3{
+  grid-column-start:3;
+  width:350px;
+  transform: rotate(4deg) translate(-400px,-1700px);
+}
+
+#bordome{
+  grid-column-start:2;
+  transform: rotate(-5deg) translate(0,-1300px);
+  width:600px;
+}
+
+
+.button{
+    border: none;
+    padding: 5px;
+    animation: whee 2s infinite;
+}
+
+
+
+.button:hover{
+    background-color: rgba(0, 0, 255, 0.51);
+    transform:translateY(40px);
+}
+
+.popup .overlay {
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background: rbga(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index:2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn {
+    position:absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height:30px;
+    background:#222;
+    color:#fff;
+    font-size:25px;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius:50%;
+}
+
+.popup.active .overlay{
+    display:block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#piracy {
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.modal{
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width:100%;
+  }
+
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+
+  /***************** FEATURED ****************/
+  #featured{
+    font-family: "Special Elite";
+    background-image: linear-gradient(rgba(0, 0, 0, 0),black);
+    padding:20px;
+    padding-top:100px;
+  }
+  
+  h1{
+    font-size: 7em;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  #featured li{
+    padding-bottom:50px;
+  }
+
+  a{
+    font-size:2em;
+    color:rgb(46, 233, 46)
+  }
+
+  a:visited {
+    color: rgb(46, 233, 46);
+  }
+  
+
+  .special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
